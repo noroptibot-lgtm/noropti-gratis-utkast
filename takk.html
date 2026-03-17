@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takk! Vi lager utkastet ditt — Noropti</title>
+  
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1574129540529332');
+    fbq('track', 'PageView');
+    fbq('track', 'CompleteRegistration');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1574129540529332&ev=PageView&noscript=1"/></noscript>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .check-circle {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      font-size: 40px;
+      animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    @keyframes popIn {
+      0% { transform: scale(0); }
+      100% { transform: scale(1); }
+    }
+    
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+    
+    .subtitle {
+      font-size: 18px;
+      color: #9ca3af;
+      margin-bottom: 40px;
+      line-height: 1.7;
+      text-align: center;
+    }
+    
+    /* Timeline */
+    .timeline {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+    
+    .timeline h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #d1d5db;
+    }
+    
+    .timeline-item {
+      display: flex;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .timeline-item:last-child { border-bottom: none; }
+    
+    .timeline-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(59, 130, 246, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    
+    .timeline-content h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .timeline-content p { font-size: 13px; color: #6b7280; }
+    
+    /* Booking section */
+    .booking-section {
+      background: rgba(59, 130, 246, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .booking-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    
+    .booking-section p {
+      font-size: 15px;
+      color: #9ca3af;
+      margin-bottom: 24px;
+    }
+    
+    .booking-section .optional {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 100px;
+      padding: 4px 14px;
+      font-size: 12px;
+      color: #60a5fa;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    
+    .booking-iframe {
+      width: 100%;
+      min-height: 600px;
+      border: none;
+      border-radius: 12px;
+      background: #fff;
+    }
+    
+    .social-proof {
+      font-size: 14px;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 32px;
+    }
+    
+    .social-proof strong { color: #fbbf24; }
+    
+    @media (max-width: 640px) {
+      .container { padding: 32px 16px; }
+      .timeline, .booking-section { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="check-circle">✓</div>
+    
+    <h1>Takk! Vi har mottatt din forespørsel.</h1>
+    <p class="subtitle">Vi jobber allerede med utkastet ditt. Du mottar det på e-post innen 48 timer.</p>
+    
+    <div class="timeline">
+      <h3>Hva skjer nå?</h3>
+      
+      <div class="timeline-item">
+        <div class="timeline-icon">📋</div>
+        <div class="timeline-content">
+          <h4>Vi analyserer bedriften din</h4>
+          <p>Vi ser på bransjen din, konkurrenter, og hva som fungerer.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-icon">🎨</div>
+        <div class="timeline-content">
+          <h4>Vi designer et skreddersydd utkast</h4>
+          <p>Basert på analysen lager vi et konkret forslag til nettsiden din.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-icon">📧</div>
+        <div class="timeline-content">
+          <h4>Du mottar utkastet på e-post</h4>
+          <p>Innen 48 timer. Ingen forpliktelser — utkastet er ditt uansett.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Booking Widget -->
+    <div class="booking-section">
+      <span class="optional">Valgfritt — men anbefalt</span>
+      <h2>Vil du gå gjennom utkastet sammen med oss?</h2>
+      <p>Book et kort, uforpliktende møte så vi kan vise deg utkastet og svare på spørsmål.</p>
+      
+      <iframe 
+        src="https://api.leadconnectorhq.com/widget/booking/VvjXwsq7GVvJokWzwpQm" 
+        class="booking-iframe"
+        scrolling="no"
+        loading="lazy"
+        title="Book møte med Noropti">
+      </iframe>
+    </div>
+    
+    <p class="social-proof"><strong>★★★★★</strong> — Brukt av over 30 norske bedrifter</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Få et Gratis Nettside-Utkast — Noropti</title>
+  <meta name="description" content="Vi lager et gratis utkast til din bedriftsnettside på under 48 timer. Se hvordan nettsiden din burde se ut for å få flere kunder.">
+  
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1574129540529332');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1574129540529332&ev=PageView&noscript=1"/></noscript>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #0a0a0a 0%, #111827 50%, #0a0a0a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 14px;
+      color: #60a5fa;
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+    
+    .badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #3b82f6;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    
+    h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 900;
+      text-align: center;
+      max-width: 800px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    
+    h1 span {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .subtitle {
+      font-size: 18px;
+      color: #9ca3af;
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    
+    /* Form Card */
+    .form-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 520px;
+      backdrop-filter: blur(20px);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .form-card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    
+    .form-card .form-sub {
+      font-size: 14px;
+      color: #6b7280;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    
+    .form-group {
+      margin-bottom: 16px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #d1d5db;
+      margin-bottom: 6px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 16px;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #3b82f6;
+    }
+    
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239ca3af' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.5l-5-5h10l-5 5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+    
+    .form-group select option {
+      background: #1f2937;
+      color: #fff;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      margin-top: 8px;
+      font-family: inherit;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);
+    }
+    
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+    
+    .form-note {
+      font-size: 12px;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 12px;
+    }
+    
+    /* Value Props */
+    .value-section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .value-section h2 {
+      font-size: 32px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    
+    .value-section .section-sub {
+      font-size: 16px;
+      color: #9ca3af;
+      text-align: center;
+      margin-bottom: 48px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    
+    .value-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 32px;
+      transition: border-color 0.3s;
+    }
+    
+    .value-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+    
+    .value-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(59, 130, 246, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    
+    .value-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .value-card p {
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+    
+    /* How it works */
+    .steps-section {
+      padding: 80px 20px;
+      background: rgba(255, 255, 255, 0.01);
+    }
+    
+    .steps-section h2 {
+      font-size: 32px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .step {
+      flex: 1;
+      min-width: 220px;
+      max-width: 260px;
+      text-align: center;
+    }
+    
+    .step-num {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      margin: 0 auto 16px;
+    }
+    
+    .step h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .step p {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    
+    /* Testimonial */
+    .testimonial-section {
+      padding: 80px 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .stars {
+      font-size: 28px;
+      color: #fbbf24;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial-text {
+      font-size: 20px;
+      font-style: italic;
+      color: #e5e7eb;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial-author {
+      font-size: 14px;
+      color: #6b7280;
+    }
+    
+    .testimonial-author strong {
+      color: #d1d5db;
+    }
+    
+    /* Bottom CTA */
+    .bottom-cta {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.05) 50%, transparent 100%);
+    }
+    
+    .bottom-cta h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    
+    .bottom-cta p {
+      font-size: 16px;
+      color: #9ca3af;
+      margin-bottom: 32px;
+    }
+    
+    .bottom-cta .cta-btn {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    
+    .bottom-cta .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Urgency */
+    .urgency {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #f59e0b;
+      margin-top: 16px;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    footer p {
+      font-size: 13px;
+      color: #4b5563;
+    }
+    
+    footer a {
+      color: #6b7280;
+      text-decoration: none;
+    }
+    
+    /* Mobile */
+    @media (max-width: 640px) {
+      .hero { padding: 40px 16px 32px; }
+      .form-card { padding: 28px 20px; }
+      .value-section, .steps-section, .testimonial-section, .bottom-cta { padding: 60px 16px; }
+    }
+    
+    /* Loading animation */
+    .form-card.loading .submit-btn {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    
+    .spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin: 0 auto;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .form-card.loading .spinner { display: inline-block; }
+    .form-card.loading .btn-text { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="badge">Begrenset kapasitet — maks 4 prosjekter/mnd</div>
+    
+    <h1>Få et gratis nettside-utkast <span>på under 48 timer</span></h1>
+    
+    <p class="subtitle">Vi viser deg hvordan nettsiden din burde se ut for å skaffe flere kunder. Helt gratis, ingen forpliktelser.</p>
+    
+    <!-- GHL Booking Widget — creates contact automatically -->
+    <div class="form-card" id="formCard">
+      <h2>Book et gratis utkast-mote</h2>
+      <p class="form-sub">Velg en tid som passer — vi viser deg utkastet live. Ingen forpliktelser.</p>
+      
+      <iframe 
+        src="https://api.leadconnectorhq.com/widget/booking/VvjXwsq7GVvJokWzwpQm" 
+        style="width:100%;min-height:650px;border:none;border-radius:12px;"
+        scrolling="no"
+        loading="lazy"
+        title="Book gratis utkast-mote">
+      </iframe>
+      
+      <p class="form-note">100% gratis og uforpliktende. Vi tar maks 4 prosjekter per maned.</p>
+    </div>
+  </section>
+
+  <!-- Value Props -->
+  <section class="value-section">
+    <h2>Hvorfor trenger du en god nettside?</h2>
+    <p class="section-sub">De fleste bedrifter taper kunder hver dag uten å vite det. Her er hvorfor.</p>
+    
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3>Forsteinntrykk teller</h3>
+        <p>Kunden bestemmer seg på 3 sekunder. En utdatert nettside betyr tapte kunder — hver eneste dag.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">📱</div>
+        <h3>60% bruker mobil</h3>
+        <p>Over 60% av kundene dine ser nettsiden på mobil. Fungerer den ikke perfekt der, mister du dem.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">🕐</div>
+        <h3>Jobber 24/7 for deg</h3>
+        <p>En god nettside genererer leads og selger for deg mens du sover. Den er din beste selger.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">📈</div>
+        <h3>Konvertering</h3>
+        <p>Riktig design og tydelige handlingsknapper gjor det enkelt for kunden å ta kontakt.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">🏆</div>
+        <h3>Tillit og troverdighet</h3>
+        <p>Profesjonelt design signaliserer kvalitet. Kunder stoler mer på bedrifter med gode nettsider.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">🚀</div>
+        <h3>Hastighet</h3>
+        <p>Hvert ekstra sekund i lastetid reduserer konverteringen med 7%. Vi bygger lynraske sider.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="steps-section">
+    <h2>Slik fungerer det</h2>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Fyll ut skjemaet</h3>
+        <p>Fortell oss om bedriften din. Tar 30 sekunder.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Vi lager utkastet</h3>
+        <p>Vi designer en skreddersydd nettside for bedriften din — gratis.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Du mottar utkastet</h3>
+        <p>Innen 48 timer har du et konkret forslag i innboksen din.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial-section">
+    <div class="stars">★★★★★</div>
+    <p class="testimonial-text">"Noropti leverte en nettside som har okt kundehenvendelsene våre med over 40%. Profesjonelt og raskt. Vi anbefaler dem til alle."</p>
+    <p class="testimonial-author"><strong>Glenn R.</strong> — Bedriftseier, Oslo</p>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <h2>Klar for en nettside som faktisk gir deg kunder?</h2>
+    <p>Fyll ut skjemaet over og motta ditt gratis utkast innen 48 timer.</p>
+    <a href="#formCard" class="cta-btn">Ja, gi meg gratis utkast</a>
+    <div class="urgency">
+      ⚠️ Vi tar maks 4 prosjekter per måned — sjekk om vi har ledig kapasitet
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Noropti AS — <a href="https://noropti.com">noropti.com</a></p>
+  </footer>
+
+  <script>
+    // GHL booking widget handles form submission automatically
+    // When someone books → GHL creates contact → our polling script catches it
+    // Meta pixel fires on page load (PageView) and booking confirmation page (Lead)
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
